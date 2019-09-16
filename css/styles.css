@@ -1,0 +1,15 @@
+.caps{
+	display: grid;
+	grid-template-columns: 47.5% 47.5%;
+	grid-column-gap: 5%;
+}
+.actorContent{
+	display: flex;
+	flex-direction: row;
+}
+.actor{
+	width: 5%;
+	margin: 0 1%;
+	padding: 2%;
+	box-shadow: 1px 1px 7px gray;
+}
