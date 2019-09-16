@@ -175,7 +175,7 @@ let merchandising = {
 			prize: 13.00,
 		}
 	],
-	phone-cases: [
+	phoneCases: [
 		{
 			name: 'The Beginning is the End',
 			color: 'Black',
