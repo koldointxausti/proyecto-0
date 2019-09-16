@@ -134,3 +134,59 @@ let actores = [
 	}
 
 ];
+
+let merchandising = {
+	tshirts: [
+		{
+			name: 'Time Zone',
+			color: 'Beige',
+			prize: 9.95,
+		},{
+			name: 'When is Mikkel',
+			color: 'White',
+			prize: 19.95,
+		},{
+			name: 'Time Zone',
+			color: 'Black',
+			prize: 15.95,
+		},{
+			name: 'Dead Birds',
+			color: 'Black',
+			prize: 19.95,
+		},{
+			name: 'Winden',
+			color: 'Yellow',
+			prize: 15.95,
+		},{
+			name: 'Jonas in the cave',
+			color: 'Black',
+			prize: 19.95,
+		}
+	],
+	mugs: [
+		{
+			name: 'Classic white',
+			prize: 13.00,
+		},{
+			name: 'conical mug',
+			prize: 16.95,
+		},{
+			name: 'Classic dark',
+			prize: 13.00,
+		}
+	],
+	phone-cases: [
+		{
+			name: 'The Beginning is the End',
+			color: 'Black',
+			prize: 15.00,
+		},{
+			name: 'Jonas',
+			color: 'White',
+			prize: 15.00,
+		},{
+			name: 'Time-Zone',
+			color: 'Black',
+			prize: 15.00,
+		}]
+};
