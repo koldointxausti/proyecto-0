@@ -4,13 +4,14 @@ $(document).ready(function(){
 
 	let seasonContent = '';
 	for(let index = 0; index < temporadas.length; index++){
-		seasonContent += '<hr><div>'+
-		'<h2>Season' + temporadas[index].numTemporada + '</h2>'+
+		seasonContent += '<h1>Episodes</h1><div>'+
+		'<h2>Season ' + temporadas[index].numTemporada + '</h2>'+
 		'<div class="caps" id="season'+(index+1)+'">';
 
 		for(let i = 0; i < temporadas[index].capitulos.length; i++){
 			seasonContent +=
 				'<div class="capitulo">'+
+					'<img src="img/season'+temporadas[index].numTemporada+'/'+temporadas[index].capitulos[i].numCap+'.jpg">'+
 					'<h3><strong>'+ temporadas[index].capitulos[i].numCap + '.</strong> ' +temporadas[index].capitulos[i].title +'</h3>'+
 					'<p>'+ temporadas[index].capitulos[i].description +'</p>'+
 				'</div>';
@@ -22,7 +23,7 @@ $(document).ready(function(){
 
 	// INSERCIÓN DE DATOS DE CAST
 
-	let castContent = '<hr><div>'+
+	let castContent = '<div>'+
 		'<h2>Cast</h2><div class="actorContent">';
 	for(let index = 0; index < actores.length ; index++){
 		castContent += '<div class="actor">'+
