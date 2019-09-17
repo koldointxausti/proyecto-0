@@ -103,3 +103,30 @@ footer{
 
 }
 
+
+/*PROVISIONAL*/
+
+#timePanel{
+	width: 50%;
+	float: left;
+
+}
+
+#date, #hour{	
+	height: 90%;
+	margin-top: .7%;
+	margin-left: 1%;
+	float: left;
+	color: white;
+	font-size: 25px;
+	font-family: nanumgothic;
+	vertical-align: middle;
+}
+
+#hour{
+	width: 30%;
+}
+
+#date{
+	width: 40%;
+}

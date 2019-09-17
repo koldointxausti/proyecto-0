@@ -8,27 +8,23 @@
 	<script src="lib/jquery-3.4.1.min.js"></script>
 	<script src="js/datos.js"></script>
 	<script src="js/mainmerchandising.js"></script>
-	<script type="text/javascript" src="JS/moment.js"></script>
+	<script type="text/javascript" src="lib/moment.js"></script>
 	<script type="text/javascript" src="JS/timeScript.js"></script>
-
 
 </head>
 <body>
 	<nav>
-
 		<?php 
-
-	date_default_timezone_set('Europe/Madrid');
-	echo "<div id = 'timePanel'>".
-	"<div class = 'date'>".
-	date('F jS, Y ').
-	"</div>".
-	'<div id="hour">'.
-	date('G:i:s').
-	"</div>".
-	"</div>";
-
-	?>
+		date_default_timezone_set('Europe/Madrid');
+		echo "<div id = 'timePanel'>".
+		"<div id = 'date'>".
+		date('F jS, Y ').
+		"</div>".
+		'<div id="hour">'.
+		date('G:i:s').
+		"</div>".
+		"</div>";
+		?>
 		<ul>
 			<li><a href="#tshirts">T-Shirts</a></li>
 			<li><a href="#mugs">Mugs</a></li>
