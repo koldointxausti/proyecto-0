@@ -103,36 +103,3 @@ footer{
 
 }
 
-
-/* PROVISIONAL */
-
-.tshirt{
-
-	float: left;
-
-	margin-left: 1%;
-
-}
-
-.mugs{
-
-	float: left;
-
-	margin-left: 1%;
-
-	width: 100%;
-
-	display: block;
-
-}
-
-footer{
-
-	clear: left;
-}
-
-#main{
-
-overflow: hidden;
-
-}
