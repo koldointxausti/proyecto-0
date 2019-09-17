@@ -6,13 +6,15 @@ body{
 	overflow-x: hidden;
 	background: url(../img/banner.jpg) no-repeat center center fixed;
 	background-size: cover;
-	color: white;
+	color:#dedede;
+}
+@font-face{
+	src: url(../fonts/nanumgothic.ttf);
+	font-family: nanumgothic;
 }
 @font-face{
 	src: url(../fonts/manjari.ttf);
-	src: url(../fonts/nanumgothic.ttf);
 	font-family: manjari;
-	font-family: nanumgothic;
 }
 header > a > img{
 	position: absolute;
@@ -57,20 +59,113 @@ li a{
 	color: white;
 	font-size: 25px;
 }
+#seasonsNav{
+	display: none;
+}
+
 #main{
 	background-color: #242424;
 	opacity: 1;
 	padding-bottom: 20px;
 }
 
-#seasonsNav{
+#seasonPicker{
+	font-size: 24px;
+	background:none;
+	color:#dedede;
+	border:none;
+	border-bottom: 2px solid white;
+}
+.disabled{
+	opacity: 0.2!important;
+	cursor: default!important;
+}
+.capArrows{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background-color: gray!important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 360px;
+	top:calc(50% - 46px);
+	z-index: 2;
+	user-select: none;
+	cursor: pointer;
+}
+#capBack{
+	left:2%;
+}
+#capNext{
+ 	right: 2%;
+	text-align: center;
+}
+
+.capitulo:first-of-type{
+	margin-left: 10%;
+}
+
+
+.caps{
+	width:100vw;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	height:calc(550px + 10%);
+	padding:5% 0;
+	white-space: nowrap;
+	position: relative;
+}
+.capSelected{
+	width:550px!important;
+	height:350px!important;
+	left: 0!important;
+	top:10%!important;
+}
+.capInfo{
+	border-radius: 0 0 10px 10px;
+	font-family: nanumgothic;
+}
+.capDesc{
+	padding-top: 2%;
+	white-space: pre-wrap;
+	font-family: manjari;
+}
+
+
+.capitulo{
+	display: inline-block;
+	position: relative;
+	width: 350px;
+	height: 200px;
+	border-radius: 10px;
+	box-shadow: 3px 2px 4px black;
+	margin: 0 2.5%;
+}
+.capitulo > img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	z-index: 0;
+}
+.capInfo{
+	z-index: 1;
+	position: absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:3%;
+	min-height: 50px;
+	background-color: rgba(0,0,0,0.7);
+}
+.capDesc{
 	display: none;
 }
-.caps{
-	display: grid;
-	grid-template-columns: 47.5% 47.5%;
-	grid-column-gap: 5%;
-}
+
+
 .actorContent{
 	display: flex;
 	flex-direction: row;
@@ -81,25 +176,7 @@ li a{
 	padding: 2%;
 	box-shadow: 1px 1px 7px gray;
 }
-.capitulo{
-	position: relative;
-	width: 23vw;
-	height: 43vh;
-	border-radius: 10px;
-	box-shadow: 3px 2px 4px black;
-	margin: 10px 0 10px 0;
-
-}
-.capitulo > img{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-}
 footer{
 	text-align: center;
 
 }
-
