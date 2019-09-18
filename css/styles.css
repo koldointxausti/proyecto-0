@@ -7,6 +7,7 @@ body{
 	background: url(../img/banner.jpg) no-repeat center center fixed;
 	background-size: cover;
 	color:#dedede;
+	font-family: manjari;
 }
 @font-face{
 	src: url(../fonts/nanumgothic.ttf);
@@ -16,43 +17,50 @@ body{
 	src: url(../fonts/manjari.ttf);
 	font-family: manjari;
 }
-header > a > img{
-	position: absolute;
-	width: 75px;
-	right: 5vw;
-	bottom: 5vh;
-}
 header{
 	width: 100vw;
 	height: 100vh;
 	position: relative;
 }
-header > h1{
-	font-family: nanumgothic;
-	letter-spacing: 150px;
-	font-size: 120px;
-	color: white;
-	text-align: center;
-	height: max-content;
-	padding-top: 35vh;
+#scrollDownButton{
+	background:none!important;
+	top:auto;
+	bottom:2%;
+	left:calc(50vw - 42px);
+	height: 84px;
+	width: 84px;
+}
+header > a {
+	display: flex;
+	justify-content: center;
+}
+header > a > img{
+	height: 35vh;
+	padding-top: 25vh;
 }
 nav{
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
 	top: 0;
 	width: 100vw;
-	height: 7vh;
+	z-index: 2;
 }
 ul{
 	float: right;
 	padding-right: 5vw;
+	height: 100%;
 }
 li{
+	height: 100%;
+	padding:5% 0;
 	display: inline-block;
 	padding-left: 10px;
 	padding-right: 10px;
 	font-family: nanumgothic;
-	padding-top: 5px;
+}
+li:hover{
+	background-color: #262626;
+	cursor: pointer;
 }
 li a{
 	text-decoration: none;
@@ -68,19 +76,35 @@ li a{
 	opacity: 1;
 	padding-bottom: 20px;
 }
-
+#ep-title{
+	margin-left: 4%;
+	padding: 5% 0 2% 0;
+	text-transform: uppercase;
+}
 #seasonPicker{
 	font-size: 24px;
 	background:none;
 	color:#dedede;
-	border:none;
-	border-bottom: 2px solid white;
+	border-color: transparent;
+	position: sticky;
+	z-index: 3;
+	top:1%;
+	left:5%;
+	padding-bottom: .5%;
+	border-bottom: 5px solid white;
+	cursor: pointer;
+}
+
+option{
+	color:#242424;
+	font-size: 18px;
+	font-weight: bold;
 }
 .disabled{
 	opacity: 0.2!important;
 	cursor: default!important;
 }
-.capArrows{
+.arrows{
 	position: absolute;
 	height: 50px;
 	width: 50px;
@@ -102,6 +126,8 @@ li a{
 	text-align: center;
 }
 
+
+
 .capitulo:first-of-type{
 	margin-left: 10%;
 }
@@ -115,6 +141,9 @@ li a{
 	padding:5% 0;
 	white-space: nowrap;
 	position: relative;
+}
+.caps > .capitulo:not(.capSelected){
+	margin-bottom: 80px;
 }
 .capSelected{
 	width:550px!important;
@@ -139,8 +168,12 @@ li a{
 	width: 350px;
 	height: 200px;
 	border-radius: 10px;
-	box-shadow: 3px 2px 4px black;
+	box-shadow: 3px 2px 32px black;
 	margin: 0 2.5%;
+	cursor: pointer;
+}
+.capitulo:hover{
+	box-shadow: 1px 1px 50px black;
 }
 .capitulo > img{
 	position: absolute;
@@ -178,5 +211,6 @@ li a{
 }
 footer{
 	text-align: center;
-
+	background: #151515;
+	padding: 1% 0;
 }

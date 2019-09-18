@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+	$('#scrollDownButton').click(function(){
+		$('html, body').animate({
+		   scrollTop: $("#main").offset().top
+		}, 500);
+	});
+	$('nav a').click(function(){
+		let href = $(this).attr('href');
+		$('html, body').animate({
+		   scrollTop: $(href).offset().top
+		}, 500);
+	});
+
 	// INSERCIÓN DE DATOS DE CAST
 
 	let castContent = '<div>'+
@@ -35,7 +47,7 @@ $(document).ready(function(){
 		selectedSeason = $('#seasonPicker').val();
 		let index = $('#seasonPicker').val()-1;
 		seasonContent += '<div class="caps" id="seasonContent">'+
-		'<img src="img/left-arrow.png" alt="left-arrow" id="capBack" class="capArrows">';
+		'<img src="img/left-arrow.png" alt="left-arrow" id="capBack" class="arrows">';
 
 		for(let i = 0; i < temporadas[index].capitulos.length; i++){
 			seasonContent +=
@@ -45,7 +57,7 @@ $(document).ready(function(){
 					'<p class="capDesc">'+ temporadas[index].capitulos[i].description +'</p></div>'+
 				'</div>';
 		}
-		seasonContent += '<img src="img/right-arrow.png" alt="left-arrow" id="capNext" class="capArrows">'+
+		seasonContent += '<img src="img/right-arrow.png" alt="left-arrow" id="capNext" class="arrows">'+
 		'</div>';
 		$('#seasonContainer').html(seasonContent);
 		generateCarrousel(selectedSeason);
@@ -81,7 +93,7 @@ $(document).ready(function(){
 			$('#s'+selectedSeason+'c'+oldSelectedCap).find('.capDesc').fadeOut(50);
 			$('#s'+selectedSeason+'c'+selectedCap).find('.capDesc').fadeIn(200);
 
-			if(selectedCap === temporadas[selectedSeason-1].capitulos.length+2)
+			if(selectedCap === temporadas[selectedSeason-1].capitulos.length)
 				$('#capNext').addClass('disabled');
 			else
 				$('#capNext').removeClass('disabled');
@@ -98,16 +110,17 @@ $(document).ready(function(){
 
 		$('#capNext').click(function(){
 			$('#capBack').removeClass('disabled');
-			if(selectedCap === temporadas[selectedSeason-1].capitulos.length+1)
+			if(selectedCap === temporadas[selectedSeason-1].capitulos.length-1)
 				$('#capNext').addClass('disabled');
-
-			if(selectedCap <= temporadas[selectedSeason-1].capitulos.length+1){
+			if(selectedCap < temporadas[selectedSeason-1].capitulos.length){
+				console.log(selectedCap)
 				if(selectedCap != 1){
 					$('#s'+selectedSeason+'c1').animate({'marginLeft':'-=30%'},800);
 				}else{
 					$('#s'+selectedSeason+'c'+selectedCap).animate({'marginLeft':'-=30%'},800);
 				}
 				$('#s'+selectedSeason+'c'+selectedCap).removeClass('capSelected');
+				$('#s'+selectedSeason+'c'+selectedCap).find('.capDesc').fadeOut(100);
 				selectedCap++;
 				$('#s'+selectedSeason+'c'+selectedCap).addClass('capSelected');
 				$('#s'+selectedSeason+'c'+selectedCap).find('.capDesc').fadeIn(100);
@@ -124,6 +137,7 @@ $(document).ready(function(){
 				selectedCap--;
 				$('#s'+selectedSeason+'c1').animate({'marginLeft':'+=30%'},800);
 				$('#s'+selectedSeason+'c'+selectedCap).addClass('capSelected');
+				$('#s'+selectedSeason+'c'+selectedCap).find('.capDesc').fadeIn(50);
 			}else{
 				$('#capBack').addClass('disabled');
 			}
