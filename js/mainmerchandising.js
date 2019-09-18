@@ -7,12 +7,12 @@ $(document).ready(function() {
 
 	for(let i = 0; i < merchandising.tshirts.length; i++){
 		tShirts+=
-		'<div class="tshirt">'+
+		'<div class="tshirt"><a href="#">'+
 			'<img src="img/merchandising/tshirts/'+(i+1)+'.jpg">'+
 			'<h3>'+ merchandising.tshirts[i].name +'</h3>'+
 			'<p>'+ merchandising.tshirts[i].color +' </p>'+
 			'<p>'+ merchandising.tshirts[i].price +'€</p>'+
-		'</div>';
+		'</a></div>';
 	}
 
 	$('#tshirts').html(tShirts);
@@ -25,11 +25,11 @@ $(document).ready(function() {
 
 	for(let i = 0; i < merchandising.mugs.length; i++){
 		mugs+=
-		'<div class="mug">'+
+		'<div class="mug"><a href="#">'+
 			'<img src="img/merchandising/mugs/'+(i+1)+'.jpg">'+
 			'<h3>'+ merchandising.mugs[i].name +' </h3>'+
 			'<p>'+ merchandising.tshirts[i].price +'€</p>'+
-		'</div>';
+		'</a></div>';
 	}
 
 
@@ -42,12 +42,12 @@ $(document).ready(function() {
 
 	for(let i = 0; i < merchandising.phoneCases.length; i++){
 		phoneCases+=
-		'<div class="phonecase">'+
+		'<div class="phonecase"><a href="#">'+
 			'<img src="img/merchandising/phone-cases/'+(i+1)+'.jpg">'+
 			'<h3>'+ merchandising.phoneCases[i].name +' </h3>'+ 
 			'<p>'+ merchandising.tshirts[i].color +' </p>'+
 			'<p>'+ merchandising.tshirts[i].price +'€</p>'+
-		'</div>';
+		'</a></div>';
 	}
 
 	$('#phoneCases').html(phoneCases);

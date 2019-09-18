@@ -16,7 +16,7 @@ body{
 	background: url("../img/banner.jpg")no-repeat center center fixed;
 }
 nav{
-	background-color: black;
+	background-color: rgba(0,0,0,1)!important;
 	position: fixed;
 	top: 0;
 	width: 100vw;
@@ -37,18 +37,25 @@ li a{
 	color: white;
 	font-size: 25px;
 }
+a{
+	text-decoration: none;
+}
+
 #main{
 	overflow: hidden;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(255,255,255,0.7);
 	margin-top: 3.25%;
 	padding-bottom: 30px;
 }
 #main > div{
 	margin-left: 30px;
 }
+#main img:hover{
+	opacity: 0.4;
+}
 
 h2{
-	color: white;
+	/*color: white;*/
 	grid-area: header;
 	margin-top: 5%;
 	margin-bottom: 2%;
@@ -62,15 +69,15 @@ h3, p{
 	grid: 'header header header';
 	grid-auto-columns: 20%;
 	grid-auto-rows: 45%;
-	column-gap: 100px;
+	column-gap: 150px;
 }
 #tshirts > div{
 	margin-bottom: 10%;
-	box-shadow: 5px 5px 5px black;
+	box-shadow: 5px 5px 5px #848484;
 	background-color: rgba(255,255,255,1);
 	border-radius: 5px;
 }
-.tshirt > img{
+.tshirt img{
 	width: 100%;
 	border-radius: 5px 5px 0 0;
 	border-bottom: 1px solid #BEBEBE;
@@ -88,15 +95,15 @@ h3, p{
 	grid: 'header header header';
 	grid-auto-columns: 20%;
 	grid-auto-rows: 80%;
-	column-gap: 100px;
+	column-gap: 150px;
 }
 #mugs > div{
 	margin-bottom: 10%;
-	box-shadow: 5px 5px 5px black;
+	box-shadow: 5px 5px 5px #848484;
 	background-color: rgba(255,255,255,1);
 	border-radius: 5px;
 }
-.mug > img{
+.mug img{
 	width: 100%;
 	border-radius: 5px 5px 0 0;
 	border-bottom: 1px solid #BEBEBE;
@@ -113,15 +120,15 @@ h3, p{
 	grid: 'header header header';
 	grid-auto-columns: 20%;
 	grid-auto-rows: 80%;
-	column-gap: 100px;
+	column-gap: 150px;
 }
 #phoneCases > div{
 	margin-bottom: 10%;
-	box-shadow: 5px 5px 5px black;
+	box-shadow: 5px 5px 5px #848484;
 	background-color: rgba(255,255,255,1);
 	border-radius: 5px;
 }
-.phonecase > img{
+.phonecase img{
 	width: 100%;
 	border-radius: 5px 5px 0 0;
 	border-bottom: 1px solid #BEBEBE;
@@ -136,12 +143,17 @@ footer{
 
 }
 
+span{
+
+	color: white;
+}
 
 /*PROVISIONAL*/
 
 #timePanel{
 	width: 50%;
 	float: left;
+	padding-top: 0.2%;
 
 }
 
@@ -153,7 +165,7 @@ footer{
 	color: white;
 	font-size: 25px;
 	font-family: nanumgothic;
-	vertical-align: middle;
+	
 }
 
 #hour{
@@ -161,13 +173,5 @@ footer{
 }
 
 #date{
-	width: 40%;
+	width: 45%;
 }
-
-span{
-
-color: white;
-
-}
-
-

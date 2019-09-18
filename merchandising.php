@@ -9,11 +9,13 @@
 	<script src="js/datos.js"></script>
 	<script src="js/mainmerchandising.js"></script>
 	<script type="text/javascript" src="lib/moment.js"></script>
-	<script type="text/javascript" src="JS/timeScript.js"></script>
+	<script type="text/javascript" src="js/timeScript.js"></script>
+
 
 </head>
 <body>
 	<nav>
+		<div>
 		<?php 
 		date_default_timezone_set('Europe/Madrid');
 		echo "<div id = 'timePanel'>".
@@ -25,6 +27,7 @@
 		"</div>".
 		"</div>";
 		?>
+		</div>
 		<ul>
 			<li><a href="#tshirts">T-Shirts</a></li>
 			<li><a href="#mugs">Mugs</a></li>
@@ -36,7 +39,7 @@
 		<div id="mugs"></div>
 		<div id="phoneCases"></div>
 	</div>
-	<footer><span>Xabier Artola, Koldo Intxausti y Nerea Labandera &copy 2019</span></footer>
+	<footer><span>Xabier Artola, Koldo Intxausti and Nerea Labandera &copy 2019</span></footer>
 
 </body>
 </html>
