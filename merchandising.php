@@ -10,8 +10,6 @@
 	<script src="js/mainmerchandising.js"></script>
 	<script type="text/javascript" src="lib/moment.js"></script>
 	<script type="text/javascript" src="js/timeScript.js"></script>
-
-
 </head>
 <body>
 	<nav>

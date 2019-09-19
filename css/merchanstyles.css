@@ -55,7 +55,6 @@ a{
 }
 
 h2{
-	/*color: white;*/
 	grid-area: header;
 	margin-top: 5%;
 	margin-bottom: 2%;
@@ -82,7 +81,6 @@ h3, p{
 	border-radius: 5px 5px 0 0;
 	border-bottom: 1px solid #BEBEBE;
 }
-
 
 .tshirt{
 	float: left;
