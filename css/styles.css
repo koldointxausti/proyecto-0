@@ -40,19 +40,19 @@ header > a > img{
 }
 nav{
 	background-color: rgba(0,0,0,0.4);
-	position: fixed;
-	top: 0;
+	position:fixed;
+    top:0;
 	width: 100vw;
 	z-index: 2;
 }
 ul{
 	float: right;
-	padding-right: 5vw;
 	height: 100%;
+    margin-right:3%;
 }
 li{
 	height: 100%;
-	padding:5% 0;
+	padding:2.5% 0;
 	display: inline-block;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -65,7 +65,7 @@ li:hover{
 li a{
 	text-decoration: none;
 	color: white;
-	font-size: 25px;
+	font-size: 18px;
 }
 #seasonsNav{
 	display: none;
@@ -76,19 +76,24 @@ li a{
 	opacity: 1;
 	padding-bottom: 20px;
 }
-#ep-title{
+.title{
 	margin-left: 4%;
 	padding: 5% 0 2% 0;
 	text-transform: uppercase;
+}
+.sticky{
+    position:sticky;
+    top:2.5%;
+    z-index:3;
 }
 #seasonPicker{
 	font-size: 24px;
 	background:none;
 	color:#dedede;
 	border-color: transparent;
-	position: sticky;
-	z-index: 3;
-	top:1%;
+	position:sticky;
+    z-index: 3;
+	top:2.5%;
 	left:5%;
 	padding-bottom: .5%;
 	border-bottom: 5px solid white;
@@ -100,6 +105,35 @@ option{
 	font-size: 18px;
 	font-weight: bold;
 }
+
+.seasonDescription{
+	padding:0 10%;
+}
+.seasonDescription > p{
+	color: #dedede;
+	font-size: 22px;
+	padding: 10% 0;
+}
+
+.seasonDescription {
+	width: 49%;
+	float: left;
+}
+.seasonInfo {
+	margin-right: 10%;
+}
+.seasonInfo > iframe {
+	width: 30%;
+	float: right;
+	margin-top: 2.5%;
+    border:none;
+    box-shadow:1px 1px 30px black;
+}
+
+.seasonInfo > iframe {
+	overflow: hidden;
+}
+
 .disabled{
 	opacity: 0.2!important;
 	cursor: default!important;
@@ -122,9 +156,10 @@ option{
 	left:2%;
 }
 #capNext{
-	right: 2%;
+ 	right: 2%;
 	text-align: center;
 }
+
 
 
 .capitulo:first-of-type{
@@ -197,27 +232,57 @@ option{
 	display: none;
 }
 
+@media screen and (max-width: 992px) {
+  .capitulo:first-of-type{
+	margin-left: 15%;
+  }
+}
+
+/*CAST*/
+
+.hiddenActor{
+    display:none;
+}
+
 .actorContent{
 	display: grid;
-	grid: 'header header header';
-	grid-auto-columns: 20%;
-	grid-auto-rows: 45%;
-	column-gap: 150px;
+	grid-template-columns: 30% 30% 30%;
+	grid-column-gap: 3.3%;
 }
 
 .actor{
 	width: 100%;
-	margin: 1% 1%;
 	padding: 2%;
-	
+	margin: 10% 0;
+}
+
+.actorInformation{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.actorInformation *{
+	text-align: center;
+	margin: 1% auto;
+}
+.actorInformation img{
+	margin-bottom: 10%;
+}
+.actorInformation img:hover{
+	box-shadow: 1px 1px 50px black!important;
+}
+.actorInformation h4{
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: white;
 }
 
 .actor img{
-
 	width: 200px;
 	height: 200px;
 	border-radius: 100px;
-	border: 3px solid white;	
+	border: 3px solid white;
+	box-shadow: 1px 1px 20px black;	
 }
 
 .actor div{
@@ -225,74 +290,58 @@ option{
 	padding-top: 5%;
 	padding-left: 15%;	
 }
-.actor strong{
 
-	padding-top: 1%;
+#view-more{
+    padding:1% 0;
+    width:60%;
+    margin:0 auto;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer!important;
+    font-weight: bold;
 }
+
+/*TIME AND DATE*/
+
+#timePanel{
+	width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0,0,0,0.6);
+}
+
+#date{
+    padding-right:5%;
+}
+#timePanel *{	
+	color: white;
+	font-size: 16px;
+	font-family: nanumgothic;
+}
+
 footer{
 	text-align: center;
 	background: #151515;
 	padding: 1% 0;
 }
 
-/*
- DESCRIPTION*/
-
-.seasonDescription > p{
-	
-	color: white;
-	font-size: 25px;
-	padding: 10% 10% 10% 10%;
-	
+@media screen and (max-width: 1100px) {
+    header > a > img{
+        height:auto;
+        width:80%;
+    }
 }
-
-.seasonDescription {
-	
-	width: 40%;
-	float: left;
-
+@media screen and (max-width: 600px) {
+    ul{
+        float:none;
+        display:flex;
+        justify-content: space-around;
+    }
+    header > a > img{
+        height:auto;
+        width:100%;
+    }
 }
-
-.seasonInfo > iframe {
-
-	width: 50%;
-	height: 400px;
-	float: left;
-}
-
-.seasonInfo > iframe {
-
-	overflow: hidden;
-}
-
-
-/*TIME AND DATE*/
-
-#timePanel{
-	width: 50%;
-	float: left;
-	padding-top: 0.7%;
-
-}
-
-#date, #hour{	
-	height: 90%;
-	margin-top: .7%;
-	margin-left: 1%;
-	float: left;
-	color: white;
-	font-size: 25px;
-	font-family: nanumgothic;
-	
-}
-
-#hour{
-	width: 30%;
-}
-
-#date{
-	width: 45%;
-}
-
-
-

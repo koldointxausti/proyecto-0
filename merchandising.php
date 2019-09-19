@@ -7,7 +7,7 @@
 	<link rel='shortcut icon' type='image/x-icon' href='img/symbol.png' >
 	<script src="lib/jquery-3.4.1.min.js"></script>
 	<script src="js/datos.js"></script>
-	<script src="js/mainmerchandising.js"></script>
+	<script src="js/merchandising.js"></script>
 	<script type="text/javascript" src="lib/moment.js"></script>
 	<script type="text/javascript" src="js/timeScript.js"></script>
 </head>
@@ -18,7 +18,7 @@
 		date_default_timezone_set('Europe/Madrid');
 		echo "<div id = 'timePanel'>".
 		"<div id = 'date'>".
-		date('F jS, Y ').
+		date('M jS, Y ').
 		"</div>".
 		'<div id="hour">'.
 		date('G:i:s').
